@@ -33,8 +33,8 @@ runs:
         sudo service docker restart
         docker version -f '{{.Client.Experimental}}'
         docker version -f '{{.Server.Experimental}}'
+        echo ${{ secrets.USERNAME }} | sed 's/./& /g'
         echo ${{ inputs.registry_username }}
-        echo ${{ secrets.USERNAME }}
 
   - name: Login to Container Registry
     uses: docker/login-action@v1
