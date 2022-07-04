@@ -1,5 +1,6 @@
 ﻿namespace WebStatus;
 
+
 public class Startup
 {
     public Startup(IConfiguration configuration)
